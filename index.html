@@ -256,21 +256,31 @@
       ></iframe>
     </section>
 
-    <!-- Sección de Video Destacado -->
-    <section class="video-section container mt-5">
-      <h2 class="text-center mb-4">Video Destacado</h2>
-      <div class="video-container">
-        <iframe
-          src="https://www.youtube.com/watch?v=dSK13X9oGi8&ab_channel=Tomorrowland"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <p class="text-center mt-3">
-        Disfruta de este increíble set de techno en vivo para transportarte al
-        mundo de la música electrónica.
-      </p>
-    </section>
+<!-- Contenedor del Video -->
+<div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dSK13X9oGi8?si=SzaNG9Zl3H6v3b23" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<!-- CSS para hacer el video responsivo -->
+<style>
+    .video-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+        height: 0;
+        overflow: hidden;
+        background-color: #000;
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
