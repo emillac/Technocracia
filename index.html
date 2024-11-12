@@ -1,153 +1,294 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Technocracia</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- Fuente Exo 2 -->
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Iconos de Font Awesome -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <style>
-    /* Estilos globales */
-    body {
-      background-color: #121212;
-      color: #f1f1f1;
-      font-family: "Exo 2", sans-serif;
-    }
-    h1, h2, .section-title {
-      color: #e0e0e0;
-    }
-    /* Header */
-    header {
-      position: relative;
-      height: 300px;
-      background-image: url('https://i.ibb.co/56k4Y8R/New-header-1.png');
-      background-size: cover;
-      background-position: center;
-      color: #f1f1f1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    header::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 1;
-    }
-    .header-content {
-      z-index: 2;
-      text-align: center;
-    }
-    /* Cards de Noticias */
-    .news-section, .dj-section {
-      padding: 40px;
-      background-color: #222;
-      color: #fff;
-      text-align: center;
-    }
-    .news-card, .dj-card {
-      background-color: #333;
-      border-radius: 8px;
-      overflow: hidden;
-      width: 300px;
-      transition: transform 0.3s ease;
-      margin: 15px;
-      padding: 10px;
-    }
-    .news-card:hover, .dj-card:hover {
-      transform: scale(1.05);
-    }
-    .news-image {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 4px;
-    }
-    /* Fotos de DJs en forma circular */
-    .dj-image {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin: 0 auto 10px;
-    }
-    .dj-card p {
-      margin: 10px 0;
-      color: #ccc;
-    }
-    /* Video Responsivo */
-    .video-container {
-      margin-top: 50px;
-      width: 80%;
-      max-width: 1000px;
-      margin: 0 auto;
-      background-color: #000;
-    }
-    .video-container iframe {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-    }
-    /* Footer */
-    .footer-section {
-      background-color: #111;
-      padding: 20px;
-    }
-    .footer-links a, .social-icons a {
-      text-decoration: none;
-      color: #fff;
-      margin: 0 10px;
-    }
-    .social-icons a:hover, .footer-links a:hover {
-      color: #888;
-    }
-  </style>
-</head>
-<body>
-  <!-- Header con imagen de fondo -->
-  <header>
-    <div class="header-content">
-      <h1>Technocracia</h1>
-      <p>Rendimos culto al techno</p>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technocracia</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Sección de Noticias -->
-  <section id="news" class="news-section">
-    <h2 class="section-title">Últimas Noticias</h2>
-    <div class="d-flex flex-wrap justify-content-center">
-      <!-- Card de Noticia 1 -->
-      <div class="news-card">
-        <img src="https://cdn.efestivals.co.uk/photos/misc_festivals/Creamfields24.webp" alt="Creamfields Chile" class="news-image">
-        <h3>Creamfields 2024</h3>
-        <p>Creamfields Chile se realizará el 16 y 17 de noviembre en el Club Hípico de Santiago.</p>
-        <p><a href="https://www.puntoticket.com/creamfields-2024">Consigue tus entradas aquí</a></p>
-      </div>
-      <!-- Card de Noticia 2 -->
-      <div class="news-card">
-        <img src="https://mattv.s3.us-east-2.amazonaws.com/wp-content/uploads/2024/06/447286555_845705284267850_4737442756581770401_n.jpg" alt="Nuevo Álbum de DJ" class="news-image">
-        <h3>Piknic Électronik #3</h3>
-        <p>El 23 de noviembre en el Parque Padre Hurtado, no te pierdas a The Blessed Madonna y más.</p>
-        <p><a href="https://www.puntoticket.com/Compra/SeleccionAsientos?EventoID=GLO152&CalID=1&CategoriaTicket=16">Consigue tus entradas aquí</a></p>
-      </div>
-      <!-- Card de Noticia 3 -->
-      <div class="news-card">
-        <img src="https://magikgarden.com/wp-content/uploads/2023/11/magikgarden2022-180.jpg" alt="Magik Garden" class="news-image">
-        <h3>Magik Garden</h3>
-        <p>El festival será el 30 de noviembre en Hacienda Lo Aguirre, con un lineup de primer nivel.</p>
-        <p><a href="https://magikgarden.com/tickets/">Consigue tus entradas aquí</a></p>
-      </div>
-    </div>
-  </section>
+    <style>
+      /* Estilos globales */
+      body {
+        background-color: #121212;
+        color: #f1f1f1;
+        font-family: "Exo 2", sans-serif;
+      }
 
-    <!-- Calendario de Eventos -->
+      h1 {
+        font-size: 4rem;
+        font: 3rem;
+        color: #e0e0e0;
+      }
+      h2 {
+        font-size: 2rem;
+        font: 2rem;
+        color: #e0e0e0;
+      }
+      /* Header */
+      header {
+        padding: 0px;
+        background-color: #333;
+      }
+      /* Estilos del H1 */
+      .header-title {
+        font-family: "Exo 2", sans-serif;
+        font-size: 3rem;
+        margin: 0;
+        padding: 10px;
+        background: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Fondo semitransparente para resaltar */
+      }
+
+      /* Estilos del H2 */
+      .header-subtitle {
+        font-family: "Exo 2", sans-serif;
+        font-size: 2rem;
+        margin-top: 10px;
+        color: #ccc;
+        padding: 5px;
+        background: rgba(
+          0,
+          0,
+          0,
+          0.4
+        ); /* Fondo semitransparente para coherencia */
+      }
+
+      /* Ajustes responsivos */
+      @media (max-width: 768px) {
+        .header-title {
+          font-size: 2em;
+        }
+
+        .header-subtitle {
+          font-size: 1.2em;
+        }
+      }
+      /* Sección de noticias */
+      .news-section {
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
+      .card {
+        background-color: #333;
+        border: none;
+        transition: transform 0.3s;
+      }
+      .card:hover {
+        transform: scale(1.05);
+      }
+      .card-body {
+        display: none;
+      }
+      .card.expanded .card-body {
+        display: block;
+      }
+
+      /* Calendario */
+      .calendar-section iframe {
+        filter: grayscale(1) brightness(0.8) invert(1);
+        border: 1px solid #555;
+        width: 100%;
+        height: 600px;
+      }
+
+      /* Video destacado */
+      .video-section {
+        margin-top: 40px;
+      }
+      .video-container {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+      }
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header con imagen de fondo -->
+    <header class="header-section text-center">
+      <div class="header-content">
+        <h1>Technocracia</h1>
+        <p>Rendimos culto al techno</p>
+      </div>
+    </header>
+
+    <style>
+      /* Estilos del Header */
+      .header-section {
+        position: relative;
+        height: 300px; /* Ajusta la altura según prefieras */
+        background-image: url('https://i.ibb.co/56k4Y8R/New-header-1.png" alt="Mundo con audífonos" border="0">'); /* Reemplaza con la URL de tu imagen */
+        background-size: cover;
+        background-position: center;
+        color: #f1f1f1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Efecto de capa oscura sobre la imagen */
+      .header-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+
+      /* Estilos del contenido del Header */
+      .header-content {
+        position: relative;
+        z-index: 2;
+      }
+    </style>
+
+    <!-- Sección de Noticias -->
+    <section id="news" class="news-section">
+      <h2 class="section-title">Últimas Noticias</h2>
+      <div class="news-container">
+        <!-- Card de Noticia 1 -->
+        <div class="news-card">
+          <img
+            src="https://cdn.efestivals.co.uk/photos/misc_festivals/Creamfields24.webp"
+            alt="Creamfields Chile"
+            class="news-image"
+          />
+          <h3 class="news-title">Creamfields 2024</h3>
+          <p class="news-description">
+            Creamfields Chile se realizará el próximo 16 y 17 de noviembre en el
+            Club Hípico de Santiago, con un line up liderados por el Swedish
+            House Mafia, junto a 80 artistas nacionales e internacionales.
+          </p>
+          <p>
+            Consigue tus entradas
+            <a href="https://www.puntoticket.com/creamfields-2024"> aquí </a>
+          </p>
+        </div>
+
+        <!-- Card de Noticia 2 -->
+        <div class="news-card">
+          <img
+            src="https://mattv.s3.us-east-2.amazonaws.com/wp-content/uploads/2024/06/447286555_845705284267850_4737442756581770401_n.jpg"
+            alt="Nuevo Álbum de DJ"
+            class="news-image"
+          />
+          <h3 class="news-title">Piknic Électronik #3</h3>
+          <p class="news-description">
+            NO te puedes perder esta nueva fecha Piknic Électronik Santiago con
+            The Blessed Madonna, Spencer Parker, DAGA, Michelle Tijoux y Sepha
+            en el Parque Padre Hurtado el 23 de noviembre 🌈💛😎🍒.
+          </p>
+          <p>
+            Consigue tus entradas
+            <a
+              href="https://www.puntoticket.com/Compra/SeleccionAsientos?EventoID=GLO152&CalID=1&CategoriaTicket=16"
+            >
+              aquí</a
+            >
+          </p>
+        </div>
+
+        <!-- Card de Noticia 3 -->
+        <div class="news-card">
+          <img
+            src="https://magikgarden.com/wp-content/uploads/2023/11/magikgarden2022-180.jpg"
+            alt="Magik Garden"
+            class="news-image"
+          />
+          <h3 class="news-title">Magik Garden</h3>
+          <p class="news-description">
+            El sábado 30 de noviembre 2024 se llevará a cabo la quinta edición
+            del festival Magik Garden. El evento tendrá lugar lugar en Hacienda
+            Lo Aguirre (ex Broadway) y contará con un lineup de primer nivel.
+          </p>
+          <p>
+            Consigue tus entradas
+            <a href="https://magikgarden.com/tickets/">aquí</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Estilos CSS para las Cards -->
+    <style>
+      /* Sección de Noticias */
+      .news-section {
+        padding: 40px;
+        background-color: #222;
+        color: #fff;
+        text-align: center;
+      }
+
+      .section-title {
+        font-family: "Exo 2", sans-serif;
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+
+      /* Contenedor de Cards */
+      .news-container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      /* Card de Noticia */
+      .news-card {
+        background-color: #333;
+        border-radius: 8px;
+        overflow: hidden;
+        width: 300px;
+        transition: transform 0.3s ease;
+      }
+
+      .news-card:hover {
+        transform: scale(1.05);
+      }
+
+      .news-image {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      .news-title {
+        font-family: "Exo 2", sans-serif;
+        font-size: 1.2em;
+        margin: 10px;
+      }
+
+      .news-description {
+        font-size: 0.9em;
+        color: #bbb;
+        margin: 0 10px 15px;
+      }
+    </style>
+
+    <!-- Sección de Calendario -->
     <section class="calendar-section container mt-5">
       <h2 class="text-center mb-4">Calendario de Eventos</h2>
       <iframe
@@ -156,76 +297,232 @@
         scrolling="no"
       ></iframe>
     </section>
+    <br />
+    <!-- Contenedor del Video -->
+    <section>
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/b9kThoLdDc8?si=mM4gLaM8-Yz4q71E"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
 
-  <!-- Contenedor del Video -->
-  <section class="video-section">
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/b9kThoLdDc8?si=mM4gLaM8-Yz4q71E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  </section>
+      <!-- CSS para el Video Responsivo -->
+      <style>
+        /* Contenedor del video */
+        .video-container {
+          margin-top: 50px;
+          width: 80%; /* Ocupa el 80% en pantallas grandes */
+          max-width: 1000px; /* Limita el ancho máximo del video */
+          margin: 0 auto; /* Centra el contenedor */
+          background-color: #000;
+        }
 
-  <!-- Sección de Perfiles de DJ -->
-     <br> 
-      <section id="dj-profiles" class="dj-section">
-      <h2>Próceres electrónicos</h2>
+        /* Estilo del iframe */
+        .video-container iframe {
+          margin-top: 50px;
+          width: 100%; /* Ocupa el 100% del contenedor */
+          aspect-ratio: 16 / 9; /* Mantiene una relación de aspecto 16:9 */
+        }
+
+        /* Media Query para pantallas móviles */
+        @media (max-width: 768px) {
+          .video-container {
+            width: 100%; /* En móviles, ocupa el 100% del ancho */
+          }
+        }
+      </style>
+    </section>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <br />
+
+    <br />
+
+    <!-- Sección de Perfiles de DJ -->
+    <section id="dj-profiles" class="dj-section">
+      <h2 class="section-title">Próceres electrónicos</h2>
       <div class="dj-container">
-        <!-- DJ 1 -->
+        <!-- Card de DJ 1 -->
         <div class="dj-card">
           <img
-            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fbk.asia-city.com%2Fsites%2Fdefault%2Ffiles%2Fricardo.jpg&f=1&nofb=1"
+            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fbk.asia-city.com%2Fsites%2Fdefault%2Ffiles%2Fricardo.jpg&f=1&nofb=1&ipt=0925b3116fc90469ff85a526ccd4944300b75b05d33fb90715dcd28b6c163000&ipo=images"
             alt="Ricardo Villalobos"
-            class="dj-image"
-          />
+            class="dj-image"/>
           <h3 class="dj-name">Ricardo Villalobos</h3>
-          <p class="dj-genre">Minimal Techno, Microhouse</p>
-          <p class="dj-description">Pionero del minimal techno, conocido por sus innovadoras mezclas y sets hipnóticos en Europa y Sudamérica.</p>
-          <p class="dj-bio">Villalobos es una figura legendaria en la escena electrónica, especialmente conocido por sus actuaciones en los clubes más reconocidos de Berlín.</p>
-          <a href="https://www.instagram.com/ricardovillalobosofficial/" class="btn btn-outline-light btn-sm">Instagram</a>
+          <p class="dj-genre">Género: Minimal Techno, Microhouse</p>
+          <p class="dj-description">
+            Pionero del minimal techno, conocido por sus innovadoras mezclas y sets hipnóticos en Europa y Sudamérica.
+          </p>
+          <a href="https://www.instagram.com/ricardovillalobosofficial/" class="btn btn-outline-light btn-sm mr-2">Instagram</a>
+          <a href="https://soundcloud.com/ricardo-villalobos-official" class="btn btn-outline-light btn-sm">Soundcloud</a>
         </div>
 
-        <!-- DJ 2 -->
+        <!-- Card de DJ 2 -->
         <div class="dj-card">
           <img
             src="https://www.techno-livesets.com/wp-content/uploads/2020/03/Luciano-Electronic-Groove-EG779.jpg"
-            alt="Luciano"
-            class="dj-image"
-          />
+            alt="Luciano" class="dj-image"/>
           <h3 class="dj-name">Luciano</h3>
-          <p class="dj-genre">Tech House, Minimal</p>
-          <p class="dj-description">Referente del tech house, fundador de Cadenza Records, maestro de la fusión del house y ritmos latinos.</p>
-          <p class="dj-bio">Luciano ha transformado la música electrónica en América Latina y Europa, siendo un ícono de las fiestas de Ibiza y Cadenza.</p>
-          <a href="https://www.instagram.com/magikluciano/" class="btn btn-outline-light btn-sm">Instagram</a>
+          <p class="dj-genre">Género: Tech House, Minimal</p>
+          <p class="dj-description">
+            Referente del tech house, fundador de Cadenza Records, maestro de la fusión del house y ritmos latinos.
+          </p>
+          <a href="https://www.instagram.com/magikluciano/" class="btn btn-outline-light btn-sm mr-2">Instagram</a>
+          <a href="https://open.spotify.com/playlist/6XHSutL1AD195RTPdbJuAG?si=oOe8pbmZRuCUpi5o7rcQHQ" class="btn btn-outline-light btn-sm">Spotify</a>
         </div>
 
-        <!-- DJ 3 -->
+        <!-- Card de DJ 3 -->
         <div class="dj-card">
           <img
             src="https://djmag.com/sites/default/files/styles/djm_23_961x540_jpg/public/article/image/nicolas-jaar.jpg?itok=jKTh5cKy"
             alt="Nicolás Jaar"
-            class="dj-image"
-          />
+            class="dj-image"/>
           <h3 class="dj-name">Nicolás Jaar</h3>
-          <p class="dj-genre">Experimental, Ambient</p>
-          <p class="dj-description">Innovador en la electrónica, mezcla sonidos experimentales con ambient y deep house.</p>
-          <p class="dj-bio">Fundador de Other People, Jaar ha ganado reconocimiento mundial por sus sonidos inmersivos y su enfoque experimental.</p>
-          <a href="https://www.instagram.com/nicolasjaar/" class="btn btn-outline-light btn-sm">Instagram</a>
+          <p class="dj-genre">Género: Experimental, Ambient</p>
+          <p class="dj-description">
+            Innovador en la electrónica, mezcla sonidos experimentales con ambient y deep house. Fundador de Other People.
+          </p>
+          <a href="https://www.instagram.com/nicolasjaar/" class="btn btn-outline-light btn-sm mr-2">Instagram</a>
+          <a href="https://soundcloud.com/nicolas-jaar" class="btn btn-outline-light btn-sm">Soundcloud</a>
         </div>
-      </div>
-    </section
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer-section text-center">
-    <div class="container">
-      <div class="social-icons">
-        <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+    <!-- Estilos CSS para los Perfiles de DJ -->
+    <style>
+      /* Sección de DJ */
+      .dj-section {
+        padding: 40px;
+        background-color: #222;
+        color: #fff;
+        text-align: center;
+      }
+
+      .section-title {
+        font-family: "Exo 2", sans-serif;
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+
+      /* Contenedor de Cards */
+      .dj-container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      /* Card de DJ */
+      .dj-card {
+        background-color: #333;
+        border-radius: 8px;
+        overflow: hidden;
+        width: 300px;
+        transition: transform 0.3s ease;
+        padding: 15px;
+      }
+
+      .dj-card:hover {
+        transform: scale(1.05);
+      }
+
+      .dj-image {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 4px;
+      }
+
+      .dj-name {
+        font-family: "Exo 2", sans-serif;
+        font-size: 1.2em;
+        margin-top: 10px;
+        color: #fff;
+      }
+
+      .dj-genre {
+        font-size: 0.9em;
+        color: #bbb;
+        margin-top: 5px;
+      }
+
+      .dj-description {
+        font-size: 0.9em;
+        color: #ccc;
+        margin-top: 10px;
+      }
+    </style>
+
+    <!-- JavaScript para expandir cards -->
+    <script>
+      function toggleCard(card) {
+        $(card).toggleClass("expanded");
+      }
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer-section text-center text-white py-4">
+      <div class="container">
+        <!-- Redes Sociales -->
+        <div class="social-icons mb-3">
+          <a href="#" class="text-white mx-2"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white mx-2"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" class="text-white mx-2"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <!-- Enlaces -->
+        <div class="footer-links mb-3">
+          <a href="#home" class="text-white mx-2">Inicio</a>
+          <a href="#about" class="text-white mx-2">Sobre Nosotros</a>
+          <a href="#events" class="text-white mx-2">Eventos</a>
+          <a href="mailto: erick.milla@gmail.com" class="text-white mx-2"
+            >Contacto</a
+          >
+        </div>
+
+        <!-- Derechos de autor -->
+        <p class="mb-0">
+          &copy; 2024 Techno Beats. Todos los derechos reservados.
+        </p>
       </div>
-      <p class="footer-links">
-        <a href="#">Inicio</a> | <a href="#news">Noticias</a> | <a href="#dj-profiles">Próceres electrónicos</a> | <a href="#contact">Contacto</a>
-      </p>
-      <p>© 2024 Technocracia. Todos los derechos reservados.</p>
-    </div>
-  </footer>
-</body>
+    </footer>
+
+    <!-- Estilos del Footer -->
+    <style>
+      .footer-section {
+        background-color: #111; /* Color oscuro para el fondo */
+      }
+
+      .footer-links a {
+        text-decoration: none;
+      }
+
+      .social-icons a {
+        font-size: 20px;
+      }
+
+      .social-icons a:hover,
+      .footer-links a:hover {
+        color: #888; /* Color de hover para los enlaces */
+      }
+    </style>
+
+    <!-- Iconos de Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
